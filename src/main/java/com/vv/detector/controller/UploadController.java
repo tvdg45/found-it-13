@@ -13,7 +13,7 @@ import java.io.IOException;
 public class UploadController {
 
     @CrossOrigin(origins = "*", maxAge = 3600)
-    @PostMapping("/upload")
+    @GetMapping("/upload")
     public void upload(@RequestParam("file") MultipartFile file) {
         if(!file.isEmpty()) {
             if(file.getContentType().contains("image")) {
