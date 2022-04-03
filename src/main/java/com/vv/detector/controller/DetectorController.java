@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class DetectorController {
 
     @CrossOrigin(origins = "*", maxAge = 3600)
-    @PostMapping("/detector")
+    @GetMapping("/detector")
     public void detector(@RequestParam("file") MultipartFile file) {
         Command.exec(file);
     }
